@@ -39,7 +39,7 @@ export class MailService {
     }
     const date = new Date();
     const response = await this.mailerService.sendMail({
-      to: 'lucaslap27@gmail.com',
+      to: process.env.MAIL_DESTINI,
       // from: '"Support Team" <support@example.com>', // override default from
       subject: 'Oba... Recebemos mais um pedido',
       template: './confirmation', // `.hbs` extension is appended automatically
