@@ -17,7 +17,6 @@ export class AppController {
   @Get()
   @ApiOperation({ summary: 'Faz teste para ver se endpoint esta funcionando' })
   getHello(@Query() message: MessageTesteDto) {
-    console.log(message);
     if (message) {
       return this.appService.returnMessageCustom(message);
     }
